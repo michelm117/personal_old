@@ -63,7 +63,7 @@
 
 
     <!-- ABOUT -->
-    <section class="full-screen d-lg-flex justify-content-center align-items-center" id="" style="height: 100vh;">
+    <section class="full-screen d-lg-flex justify-content-center align-items-center" id="landing">
         <div class="container">
             <div class="row">
 
@@ -89,8 +89,7 @@
                             <a href="#contact" class="btn custom-btn custom-btn-bg custom-btn-link">Get a free quote</a>
 
                         </div>
-                        <div style="height: 30vh;">
-                        </div>
+                        <div style="height: 30vh;"></div>
                     </div>
                 </div>
 
@@ -101,14 +100,12 @@
     <section class="about py-5 d-lg-flex" id="about">
         <div class="container">
             <h2 class="text-center">About Me</h2>
-
-
-            <div class="row align-items-center justify-content-center" style="background-color: lightslategrey;">
-                <div class="col-lg-4 col-8 " style="background-color: lightpink;">
+            <div class="row align-items-center justify-content-center">
+                <div class="col-lg-4 col-8 ">
                     <img class="img-fluid rounded" src="images/undraw/undraw_software_engineer_lvl5.svg" alt="">
                 </div>
 
-                <div class="col-lg-6 col-12" style="background-color: lightsalmon;">
+                <div class="col-lg-6 col-12 description">
                     <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
                     <p>I enjoy creating things that live on the internet, whether that be websites,
                         applications, or
@@ -120,8 +117,6 @@
                         basis.</p>
                     <p>Here are a few technologies I've been working with recently:</p>
                 </div>
-
-
             </div>
         </div>
     </section>
@@ -129,45 +124,68 @@
     <!-- PROJECTS -->
     <section class="project py-5" id="project">
         <div class="container">
-
             <div class="row">
                 <div class="col-lg-11 mx-auto col-12">
                     <div class="col-lg-8 mx-auto text-center">
                         <h2>Things I have designed and build</h2>
                     </div>
 
-                    <!-- First Project -->
                     <div class="row">
-                        <div class="project_1 d-flex">
+                        <!-- Minttube.net -->
+                        <div class="row project_container">
+                            <div class="project project_right">
 
-                            <div class="col-12 col-md-8">
-                                <a href="https://www.google.com">
-                                    <div class="img">
-                                        <img class="img-fluid" src="images/project/project-image01.png" alt="">
+                                <div class="col-12 col-md-8 project_img">
+                                    <a href="https://www.minttube.net">
+                                        <div class="img">
+                                            <img class="img-fluid" src="images/project/minttube.png" alt="">
+                                        </div>
+                                    </a>
+                                </div>
+
+                                <div class="col-12 col-md-8 col-lg-6 project_card_right">
+                                    <div class="">
+                                        <h5>Featured Project</h5>
+                                        <h2>Minttube</h2>
+                                        <p class="project_description_right">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
+                                            nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque
+                                            at.
+                                            Suspendisse potenti. </p>
                                     </div>
-                                </a>
+                                    <div>
+                                        Django
+                                    </div>
+
+                                </div>
                             </div>
+                        </div>
 
-                            <div class="col-6 col-md-6" style="
-                        text-align: right;
-                        position: absolute;
-                        top: 30%;
-                        right: 10px;
-                        align-items: center;
-                        height: auto;
-                        ">
-                                <div class="">
-                                    <h5>Featured Project</h5>
-                                    <h2>Minttube</h2>
-                                    <p style="background-color:#5b5b5b; color: white; padding: 15px 15px 15px 50px;">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
-                                        nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque at.
-                                        Suspendisse potenti. </p>
-                                </div>
-                                <div>
-                                    Django
+                        <!-- Typewriter -->
+                        <div class="row project_container">
+                            <div class="project project_left">
+                                <div class="col-12 col-md-8 project_img">
+                                    <a href="https://www.google.com">
+                                        <div class="img">
+                                            <img class="img-fluid" src="images/project/typewriter_screen.png" alt="">
+                                        </div>
+                                    </a>
                                 </div>
 
+                                <div class="col-12 col-md-8 col-lg-6 project_card_right">
+                                    <div class="">
+                                        <h5>Featured Project</h5>
+                                        <h2>Typewriter</h2>
+                                        <p class="project_description_left">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
+                                            nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque
+                                            at.
+                                            Suspendisse potenti. </p>
+                                    </div>
+                                    <div>
+                                        Javascript jQuery
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -261,6 +279,7 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
+    <script src="js/hover_project_img.js"></script>
 
 </body>
 
