@@ -512,25 +512,6 @@ strong {
     display: flex;
 }
 
-.project_left {
-    justify-content: flex-end;
-}
-
-.project_card_left {
-    text-align: left;
-    position: absolute;
-    left: 10px;
-    align-items: center;
-    height: auto;
-    top: 63%;
-}
-
-.project_description_left {
-    background-color: var(--text-color);
-    color: var(--white-color);
-    padding: 15px 50px 15px 15px;
-}
-
 .project_right {
     justify-content: flex-start;
 }
@@ -541,13 +522,33 @@ strong {
     right: 10px;
     align-items: center;
     height: auto;
-    top: 13%;
+    top: 15%;
 }
 
 .project_description_right {
     background-color: var(--text-color);
     color: var(--white-color);
     padding: 15px 15px 15px 50px;
+}
+
+
+.project_left {
+    justify-content: flex-end;
+}
+
+.project_card_left {
+    text-align: left;
+    position: absolute;
+    left: 10px;
+    align-items: center;
+    height: auto;
+    top: 65%;
+}
+
+.project_description_left {
+    background-color: var(--text-color);
+    color: var(--white-color);
+    padding: 15px 50px 15px 15px;
 }
 
 .google-map iframe {
@@ -633,6 +634,30 @@ strong {
     .contact-info {
         padding: 0 2rem;
     }
+    .project_img {
+        height: 50%;
+    }
+    .project {
+        background-color: yellow;
+
+    }
+    .project_container {}
+    .project_right {
+        background-color: red;
+
+
+    }
+    .project_card_right {
+        text-align: center;
+        align-items: center;
+    }
+
+    .project_description_right {
+        background-color: var(--text-color);
+        color: var(--white-color);
+        padding: 15px 15px 15px 50px;
+    }
+
 }
 @media(max-width: 767px) {
     h1 {
@@ -652,46 +677,13 @@ strong {
         text-align: center;
         padding-bottom: 20px;
     }
+
     .navbar-expand-sm .navbar-nav .nav-link {
         padding: 3px 20px;
     }
 
     .project {
-        background-color: lightgoldenrodyellow;
-    }
-
-    .project_left {
-        justify-content: unset;
-    }
-
-    .project_card_left {
-        text-align: center;
-        align-items: center;
-        height: auto;
-    }
-
-    .project_description_left {
-        background-color: var(--text-color);
-        color: var(--white-color);
-        text-align: center;
-        font-size: 11px;
-    }
-
-    .project_right {
-        justify-content: center;
-    }
-
-    .project_card_right {
-        text-align: center;
-        align-items: center;
-        height: auto;
-    }
-
-    .project_description_right {
-        background-color: var(--text-color);
-        color: var(--white-color);
-        text-align: center;
-        font-size: 11px;
+        background-color: green;
     }
 }
 @media(max-width: 580px) {
@@ -724,41 +716,7 @@ strong {
         text-align: center;
     }
     .project {
-        background-color: lightgoldenrodyellow;
-    }
-
-    .project_left {
-        justify-content: center;
-    }
-
-    .project_card_left {
-        text-align: center;
-        align-items: center;
-        height: auto;
-    }
-
-    .project_description_left {
-        background-color: var(--text-color);
-        color: var(--white-color);
-        text-align: center;
-        font-size: 11px;
-    }
-
-    .project_right {
-        justify-content: center;
-    }
-
-    .project_card_right {
-        text-align: center;
-        align-items: center;
-        height: auto;
-    }
-
-    .project_description_right {
-        background-color: var(--text-color);
-        color: var(--white-color);
-        text-align: center;
-        font-size: 11px;
+        background-color: violet;
     }
 }
 @media(max-width: 320px) {
@@ -789,5 +747,9 @@ strong {
     .social-links li {
         display: inline-block;
         vertical-align: top;
+    }
+
+    .project {
+        background-color: blue;
     }
 }
