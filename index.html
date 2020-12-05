@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="css/unicons.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/style.css">
@@ -43,7 +45,7 @@
                         <a href="#about" class="nav-link"><span data-hover="About">About</span></a>
                     </li>
                     <li class="nav-item">
-                        <a href="#project" class="nav-link"><span data-hover="Projects">Projects</span></a>
+                        <a href="#projects" class="nav-link"><span data-hover="Projects">Projects</span></a>
                     </li>
                     <li class="nav-item">
                         <a href="#resume" class="nav-link"><span data-hover="Resume">Resume</span></a>
@@ -61,8 +63,7 @@
         </div>
     </nav>
 
-
-    <!-- ABOUT -->
+    <!-- Landing Page -->
     <section class="full-screen d-lg-flex justify-content-center align-items-center" id="landing">
         <div class="container">
             <div class="row">
@@ -78,9 +79,8 @@
                             </div>
                         </h1>
 
-                        <p>I'm a software engineer based in Freiburg, Germany. BS specializing in building (and
-                            occasionally
-                            designing) exceptional websites, applications, and everything in between.</p>
+                        <p>I'm a software engineer based in Freiburg, Germany. Specializing in building (and
+                            occasionally designing) exceptional websites, applications and everything in between.</p>
 
                         <div class="custom-btn-group mt-4">
                             <a href="#" class="btn mr-lg-2 custom-btn"><i class='uil uil-file-alt'></i> Download
@@ -97,6 +97,7 @@
         </div>
     </section>
 
+    <!-- About Page -->
     <section class="about py-5 d-lg-flex" id="about">
         <div class="container">
             <h2 class="text-center">About Me</h2>
@@ -106,11 +107,12 @@
                 </div>
 
                 <div class="col-lg-6 col-12 description">
-                    <p>Hello! I'm Brittany, a software engineer based in Boston, MA.</p>
-                    <p>I enjoy creating things that live on the internet, whether that be websites,
+                    <p>I am currently studying computer science at the University of Freiburg.
+                        I really enjoy creating things that live on the internet, whether that be websites,
                         applications, or
                         anything in between. My goal is to always build products that provide pixel-perfect,
                         performant experiences.</p>
+                    <p>LINUX</p>
                     <p>Shortly after graduating from Northeastern University, I joined the engineering team at
                         Upstatement where I work on a wide variety of interesting and meaningful projects on a
                         daily
@@ -122,97 +124,78 @@
     </section>
 
     <!-- PROJECTS -->
-    <section class="project py-5" id="project">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-11 mx-auto col-12">
-                    <div class="col-lg-8 mx-auto text-center">
-                        <h2>Things I have designed and build</h2>
+    <section class="projects py-3 px-5 container" id="projects">
+        <div class="project-header text-center">
+            <h2>Things I have designed and build</h2>
+        </div>
+
+
+        <!-- Minttube.net -->
+        <div class="project-card right-aligned row">
+            <!-- Image-->
+            <div class="project-image col-lg-8 col-md-12">
+                <a href="#">
+                    <img class="img-fluid" src="images/project/minttube.png" alt="">
+                </a>
+            </div>
+            <!-- Content-->
+            <div class="project-content left col-lg-6 col-md-11">
+                <p class="project-overline">Featured Project</p>
+                <h3 class="project-title">Minttube</h3>
+                <div class="project-description description_left">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
+                        nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque
+                        at. Suspendisse potenti.</p>
+                </div>
+                <div class="project-informations">
+                    <ul class="project-tech-list project-tech-list-left">
+                        <li>Django</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <div class="project-links project-links-left">
+                        <a href="#"><i class="fa">&#xf09b;</i></a>
+                        <a href="#"><i class="fa">&#xf08e;</i></a>
                     </div>
-
-                    <div class="row">
-                        <!-- Minttube.net -->
-                        <div class="row project_container">
-                            <div class="project project_right">
-                                <div class="col-lg-9 col-md-10 col-12 project_img">
-                                    <a href="https://www.minttube.net">
-                                        <div class="img">
-                                            <img class="img-fluid" src="images/project/minttube.png" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-lg-6 col-md-12 col-12   project_card_right">
-                                    <div class="project_text_card">
-                                        <h5>Featured Project</h5>
-                                        <h2>Minttube</h2>
-                                        <p class="project_description_right">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
-                                            nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque
-                                            at.
-                                            Suspendisse potenti. </p>
-                                    </div>
-                                    <div>
-                                        Django
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <!-- Typewriter -->
-                        <div class="row project_container">
-                            <div class="project project_left">
-                                <div class="col-lg-9 col-md-10 col-12 project_img">
-                                    <a href="https://www.google.com">
-                                        <div class="img">
-                                            <img class="img-fluid" src="images/project/typewriter_screen.png" alt="">
-                                        </div>
-                                    </a>
-                                </div>
-
-                                <div class="col-12 col-md-8 col-lg-6 project_card_left">
-                                    <div class="project_text_card">
-                                        <h5>Featured Project</h5>
-                                        <h2>Typewriter</h2>
-                                        <p class="project_description_left">
-                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
-                                            nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque
-                                            at.
-                                            Suspendisse potenti. </p>
-                                    </div>
-                                    <div>
-                                        Javascript jQuery
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-
                 </div>
             </div>
         </div>
+
+        <!-- Typewriter -->
+        <div class="project-card left-aligned row">
+            <!-- Image-->
+            <div class="project-image left col-lg-8 col-md-12">
+                <a href="#" class="left">
+                    <img class="img-fluid" src="images/project/typewriter_screen.png" alt="">
+                </a>
+            </div>
+            <!-- Content-->
+            <div class="project-content right col-lg-6 col-md-11">
+                <p class="project-overline">Featured Project</p>
+                <h3 class="project-title">Typewriter</h3>
+                <div class="project-description description_right">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nec viverra
+                        nisl. Etiam convallis massa risus, sit amet imperdiet sapien pellentesque
+                        at. Suspendisse potenti.</p>
+                </div>
+                <div class="project-informations">
+                    <ul class="project-tech-list project-tech-list-right">
+                        <li>jQuery</li>
+                        <li>Javascript</li>
+                    </ul>
+                    <div class="project-links project-links-right">
+                        <a href="#"><i class="fa">&#xf09b;</i></a>
+                        <a href="#"><i class="fa">&#xf08e;</i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
     </section>
 
     <!-- FEATURES -->
     <section class="resume py-5 d-lg-flex justify-content-center align-items-center" id="resume">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-12">
-                    <h2 class="mb-4">Experiences</h2>
 
-                    <div class="timeline">
-                    </div>
-                </div>
-
-                <div class="col-lg-6 col-12">
-                    <h2 class="mb-4 mobile-mt-2">Educations</h2>
-
-                    <div class="timeline">
-                    </div>
-                </div>
-            </div>
-        </div>
     </section>
 
     <!-- CONTACT -->
@@ -278,8 +261,6 @@
     <script src="js/smoothscroll.js"></script>
     <script src="js/custom.js"></script>
     <script src="js/hover_project_img.js"></script>
-    <script src="js/resize.js"></script>
-
 </body>
 
 </html>
