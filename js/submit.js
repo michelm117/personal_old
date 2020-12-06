@@ -6,6 +6,6 @@ $('.contact-form').on('submit', function (e) {
         type: 'POST',
         url: './php/contactform.php',
         success: function (data) { $('.success-message').removeClass('hidden'); console.log(data) },
-        error: function (data) { alert('Message could not be send. Please write an email to <mail@marcmichel.dev>.' + data); console.log(r + " \n " + data) }
+        error: function (data) { alert('Message could not be send. Please write an email to <mail@marcmichel.dev>.' + data); console.log(data) }
     });
 });
