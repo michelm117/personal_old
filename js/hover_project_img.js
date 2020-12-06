@@ -1,41 +1,15 @@
-screenTooSmall = 0;
 var allElementsToReset = [$(".project-overline"),
 $(".project-title"),
 $(".project-description"),
 $(".project-informations"),
 $(".project-image")];
 
-jQuery(window).resize(function () {
-    var windowsize = jQuery(window).width();
-    if (windowsize >= 990) {
-        screenTooSmall = false;
-    } else {
-        screenTooSmall = true;
-    }
-});
 
 $(function () {
     boxRollovers();
 });
 
-$(document).ready(function () {
-    var windowsize = jQuery(window).width();
-    console.log(windowsize);
-    if (windowsize > 976) {
-        screenTooSmall = false;
-    } else {
-        screenTooSmall = true;
-    }
-
-    if (screenTooSmall) {
-        var image = $(this).children('.project-image').children('a').children('img');
-        image.css({ 'filter': 'none', '-webkit-filter': 'none' });
-
-        var content = $(this).children('.project-content');
-        content.css({ 'filter': 'alpha(opacity=0)', 'opacity': '0' });
-    }
-});
-
+var screenTooSmall;
 function boxRollovers() {
     $selector = $(".project-card");
     XAngle = 0;
@@ -51,8 +25,6 @@ function boxRollovers() {
         XAngle = (0.5 - (YRel / width)) * 5;
         if (!screenTooSmall) {
             updateView($this.children(".project-image"), 50);
-            console.log($this.children());
-
             updateView($this.children(".project-content").children(), 10);
         }
     });
@@ -72,24 +44,62 @@ function updateView(oLayer, z) {
     oLayer.find("strong").css({ "transform": "perspective(525px) translateZ(" + z + "px) rotateX(" + (XAngle / 0.66) + "deg) rotateY(" + (YAngle / 0.66) + "deg)", "transition": "none", "-webkit-transition": "none" });
 }
 
-// Hover over Image on md-screens to see content.
-var showContent = false;
-$('.project-card').hover(function () {
-    if (screenTooSmall && !showContent) {
-        var image = $(this).children('.project-image').children('a').children('img');
-        image.css({ 'filter': 'brightness(0.3) saturate(100%) blur(4px)', '-webkit-filter': 'brightness(0.3) saturate(100%) blur(4px)' });
 
-        var content = $(this).children('.project-content');
-        content.css({ 'filter': 'alpha(opacity=100)', 'opacity': '100' })
+/* ----------------------------------------------/
+/ Hover over Image on md-screens to see content. /
+/-----------------------------------------------*/
+var winWidth;
+var showContent = false;
+$(document).ready(function () {
+    winWidth = jQuery(window).width();
+    checkIfScreenTooSmall();
+});
+
+function checkIfScreenTooSmall() {
+    if (winWidth >= 972) {
+        screenTooSmall = false;
+        showImageAndContent($('.project-card'));
+    } else {
+        screenTooSmall = true;
+        showImageHideContent($('.project-card'));
+    }
+};
+
+// On window resize
+$(window).on('resize', function () {
+    winWidth = $(this).width();
+    checkIfScreenTooSmall(winWidth);
+});
+
+// Hover over Image
+$('.project-card').hover(function () {
+    if (screenTooSmall) {
+        blurImageShowContent($(this));
     }
 }, function () {
-    showContent = false;
-
     if (screenTooSmall) {
-        var image = $(this).children('.project-image').children('a').children('img');
-        image.css({ 'filter': 'none', '-webkit-filter': 'none' });
-
-        var content = $(this).children('.project-content');
-        content.css({ 'filter': 'alpha(opacity=0)', 'opacity': '0' });
+        showImageHideContent($(this));
     }
 });
+
+function showImageHideContent(project_card) {
+    var image = project_card.children('.project-image').children('a').children('img');
+    image.css({ 'filter': 'none', '-webkit-filter': 'none' });
+    var content = project_card.children('.project-content');
+    content.css({ 'filter': 'alpha(opacity=0)', 'opacity': '0' });
+};
+
+function showImageAndContent(project_card) {
+    var image = project_card.children('.project-image').children('a').children('img');
+    image.css({ 'filter': 'none', '-webkit-filter': 'none' });
+    var content = project_card.children('.project-content');
+    content.css({ 'filter': 'alpha(opacity=100)', 'opacity': '100' });
+};
+
+function blurImageShowContent(project_card) {
+    var image = project_card.children('.project-image').children('a').children('img');
+    image.css({ 'filter': 'brightness(0.3) saturate(100%) blur(4px)', '-webkit-filter': 'brightness(0.3) saturate(100%) blur(4px)' });
+    var content = project_card.children('.project-content');
+    content.css({ 'filter': 'alpha(opacity=100)', 'opacity': '100' });
+};
+

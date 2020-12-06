@@ -10,7 +10,6 @@
     --main-btn-color: #474559;
 
     --dark-bg-color: #0c0c0d;
-    --dark-nav-text-color: rgba(255, 255, 255, 0.8);
 
     --dark-bg-color: #121212ff;
     --dark-nav-text-color: rgba(238, 238, 238, 0.8);
@@ -103,7 +102,7 @@ strong {
 
 .fade-in {
     opacity: 0;
-    transition: opacity 250ms ease-in;
+    transition: opacity 350ms ease-in;
 }
 .fade-in.appear {
     opacity: 1;
@@ -307,7 +306,12 @@ strong {
     transition: all 0.4s ease;
     position: relative;
 }
-
+.dark-mode .project-overline{
+    color: var(--accents-color);
+} 
+.dark-mode .project-overline{
+    color: var(--accents-color);
+} 
 
 .copyright-text {
     font-size: 16px;
@@ -401,8 +405,16 @@ strong {
 .dark-mode h4,
 .dark-mode h5,
 .dark-mode h6,
+.dark-mode .project-tech-list li ,
+.dark-mode .project-links a,
+.dark-mode .job-description p,
 .dark-mode .color-mode {
     color: var(--dark-text-color);
+}
+
+.dark-mode .company,
+.dark-mode .company-names {
+    text-shadow: none;
 }
 
 .dark-mode h1,
@@ -544,14 +556,15 @@ strong {
 /* -------------------- */
 
 .heading {
-    margin-bottom: 5vh;
+    padding: 10vh 0 5vh 0;
 }
-
+.project-spacing{
+    height: 10vh;
+}
 .project-card {
     display: flex;
     flex-direction: row-reverse;
     position: relative; /* establish nearest positioned ancenstor for absolute positioning */
-    margin-bottom: 15vh;
 }
 .project-content {
     position: absolute;
@@ -559,8 +572,7 @@ strong {
 .project-overline {
     font-family: 'Source Code Pro', monospace;
     font-weight: 600;
-    color: var(--bg-color);
-    color: var(--main-btn-color);
+    color: #10222A;
     margin: 0;
     padding: 0;
 }
@@ -627,9 +639,10 @@ strong {
 }
 
 
-/* ------------------- */
-/* ----- Contact ----- */
-/* -------------------- */
+/* ---------------------- */
+/* ----- Experience ----- */
+/* ---------------------- */
+
 .vl {
     border-left: 3px solid var(--accents-color);
     height: inherit;
@@ -642,7 +655,7 @@ strong {
     margin: 0;
     font-weight: bold;
     color: var(--accents-color);
-    text-shadow: 1px 1px 1px #eee;
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, .3);
     font-family: 'Source Code Pro', monospace;
 }
 .job-description {
@@ -656,6 +669,7 @@ strong {
 .job-description p {
     font-family: 'Source Code Pro', monospace;
     font-size: 15px;
+    font-weight: 600;
 }
 .company {
     margin: 0;
@@ -663,7 +677,7 @@ strong {
 }
 .company {
     color: var(--accents-color);
-    text-shadow: 2px 2px 2px #eee;
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, .3);
 }
 .company a {
     color: var(--accents-color);
@@ -684,12 +698,17 @@ strong {
 .job-description-list li span {
     display: block;
     padding: 0.4em 0.5em;
+    color: var(--text-color);
 }
 
 
 /* ------------------- */
 /* ----- Contact ----- */
 /* -------------------- */
+
+.to-email-field{
+    cursor: pointer;
+}
 
 .contact-form {
     position: relative;
@@ -767,7 +786,6 @@ strong {
         padding: 0 2rem;
     }
     body {
-        background-color: lightblue;
     }
     .left {}
     .right {}
@@ -778,6 +796,9 @@ strong {
     }
     .description_right {
         padding: 8px 20px;
+    }
+    .project-spacing{
+        height: 8vh;
     }
     .project-card {
         position: relative;
@@ -790,8 +811,6 @@ strong {
         transform: translate(-50%, -50%);
         text-align: center;
         min-height: 100%;
-        filter: alpha(opacity=0);
-        opacity: 0;
     }
     .project-overline {
         color: var(--accents-color);
@@ -814,16 +833,6 @@ strong {
     .project-links-right a {
         padding: 5px 10px;
     };
-    
-    .project-image a img {
-        /*
-        filter: brightness(0.3) saturate(100%) blur(4px);
-        -webkit-filter: brightness(0.3) saturate(100%) blur(4px);
-        */
-        filter: none;
-        -webkit-filter: none;
-    }
-
 }
 
 @media(max-width: 767px) {
@@ -845,7 +854,9 @@ strong {
         padding: 3px 20px;
     }
     body {
-        background-color: orangered;
+    }
+    .heading{
+        padding: 8vh 0 4vh 0;
     }
     .description_left {
         padding: 8px 10px;
@@ -853,10 +864,12 @@ strong {
     .description_right {
         padding: 8px 10px;
     }
+    .project-spacing{
+        height: 5vh;
+    }
     .project-card {
         position: relative;
         display: inline-block;
-        margin-bottom: 5vh;
     }
     .project-content {
         position: absolute;
@@ -883,8 +896,11 @@ strong {
         font-size: 15px;
     }
     .project-image a img {
+        
+        /*
         filter: brightness(0.3) saturate(100%) blur(4px);
         -webkit-filter: brightness(0.3) saturate(100%) blur(4px);
+   */
     }
 }
 
@@ -918,13 +934,16 @@ strong {
         text-align: center;
     }
     body {
-        background-color: yellow;
     }
-
+    .heading{
+        padding: 6vh 0 3vh 0;
+    }
+    .project-spacing{
+        height: 5vh;
+    }
     .project-card {
         position: relative;
         display: inline-block;
-        margin-bottom: 5vh;
     }
     .project-content {
         position: absolute;
@@ -992,12 +1011,13 @@ strong {
     }
 
     body {
-        background-color: black;
+    }
+    .project-spacing{
+        height: 5vh;
     }
     .project-card {
         position: relative;
         display: inline-block;
-        margin-bottom: 5vh;
     }
     .project-content {
         position: absolute;
@@ -1064,6 +1084,5 @@ strong {
     }
 
     body {
-        background-color: red;
     }
 }

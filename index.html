@@ -96,7 +96,7 @@
     </section>
 
     <!-- About Page -->
-    <section class="about py-5 px-5 d-lg-flex" id="about">
+    <section class="about px-5 d-lg-flex" id="about">
         <div class="container">
             <div class="heading text-center fade-in">
                 <h2>About Me</h2>
@@ -155,12 +155,16 @@
                         <li>Javascript</li>
                     </ul>
                     <div class="project-links project-links-left">
+                        <!--
                         <a href="#"><i class="fa">&#xf09b;</i></a>
-                        <a href="#"><i class="fa">&#xf08e;</i></a>
+                        -->
+                        <a href="https://minttube.net/"><i class="fa">&#xf08e;</i></a>
                     </div>
                 </div>
             </div>
         </div>
+
+        <div class="project-spacing"> </div>
 
         <!-- Typewriter -->
         <div class="project-card left-aligned row fade-in">
@@ -176,8 +180,8 @@
                 <h3 class="project-title">Typewriter</h3>
                 <div class="project-description description_right">
                     <p>
-                        Typwriter was designed by Johannes Hucht and implemented by me. The webpage was created to showcase and compare
-                        fonts created by Johannes Hucht.
+                        Typwriter was designed by Johannes Hucht and implemented by me. The webpage was created to
+                        showcase and compare self designed fonts.
                     </p>
                 </div>
                 <div class="project-informations">
@@ -186,8 +190,8 @@
                         <li>Javascript</li>
                     </ul>
                     <div class="project-links project-links-right">
-                        <a href="#"><i class="fa">&#xf09b;</i></a>
-                        <a href="#"><i class="fa">&#xf08e;</i></a>
+                        <a href="https://github.com/michelm117/typewriter/"><i class="fa">&#xf09b;</i></a>
+                        <a href="https://typewriter.daily-practice.net/"><i class="fa">&#xf08e;</i></a>
                     </div>
                 </div>
             </div>
@@ -197,7 +201,7 @@
     </section>
 
     <!-- Experience -->
-    <section class="experience py-5 d-lg-flex justify-content-center align-items-center" id="experience">
+    <section class="experience d-lg-flex justify-content-center align-items-center" id="experience">
         <div class="container">
             <div class="heading text-center fade-in">
                 <h2>Where I’ve Worked</h2>
@@ -216,26 +220,36 @@
                             </span>
                         </h4>
                         <p>
-                            December 2017 - January 2019
+                            December 2017 - January 2020
                         </p>
                     </div>
                     <ul class="job-description-list">
                         <li>
                             <span>
-                                Write modern, performant, maintainable code for a diverse array of client and internal
-                                projects
+                                Responsible for the maintenance, configuration, monitoring and reliable operation of the
+                                gpu cluster, the file servers and the virtual servers.
                             </span>
                         </li>
                         <li>
                             <span>
-                                Write modern, performant, maintainable code for a diverse array of client and internal
-                                projects
+                                Building scripts to automate recurrent tasks.
                             </span>
                         </li>
                         <li>
                             <span>
-                                Write modern, performant, maintainable code for a diverse array of client and internal
-                                projects
+                                Upgrading and troubleshooting hardware and software on workstations and servers.
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Monitor ticketing system and answers inquiries concerning systems operation,
+                                diagnosis of system hardware, software, and end user problems.
+                            </span>
+                        </li>
+                        <li>
+                            <span>
+                                Providing documentation and technical specifications for planning and
+                                implementing new or upgrades of the server infrastructure.
                             </span>
                         </li>
                     </ul>
@@ -245,13 +259,18 @@
     </section>
 
     <!-- CONTACT -->
-    <section class="contact py-5" id="contact">
+    <section class="contact" id="contact">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 mx-auto text-center">
                     <div class="contact-form">
-                        <h2 class="mb-4 fade-in">Interested to work together? Let's talk</h2>
-                        <form class="fade-in" action="" method="get">
+                        <div class="heading text-center fade-in">
+                            <h2>
+                                Interested to work together?
+                                Let's talk
+                            </h2>
+                        </div>
+                        <form class="fade-in" action="contactform.php" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <input type="text" class="form-control" name="name" placeholder="Your Name"
@@ -262,11 +281,17 @@
                                         id="email">
                                 </div>
                                 <div class="col-12">
+                                    <a href="mailto:mail@marcmichel.dev">
+                                        <input name="email" rows="6" class="form-control to-email-field"
+                                            placeholder="To: mail@marcmichel.dev" readonly></input>
+                                    </a>
+                                </div>
+                                <div class="col-12">
                                     <textarea name="message" rows="6" class="form-control" id="message"
                                         placeholder="Message"></textarea>
                                 </div>
                                 <div class="ml-lg-auto col-lg-5 col-12 mx-auto">
-                                    <input type="submit" class="form-control submit-btn" value="Submit">
+                                    <input type="submit" name="submit" class="form-control submit-btn" value="Submit">
                                 </div>
                             </div>
                         </form>
@@ -282,9 +307,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 col-12">
-                    <p class="copyright-text text-center">Copyright &copy; 2019 Marc Michel. All rights reserved</p>
-                    <p class="copyright-text text-center">Designed by <a rel="marcmichel.dev"
-                            href="https://marcmichel.dev">Marc Michel</a>
+                    <p class="copyright-text text-center">Copyright &copy; 2021 Marc Michel. All rights reserved</p>
+                    <p class="copyright-text text-center">Designed by
+                        <a href="mailto:mail@marcmichel.dev">Marc Michel</a>
                     </p>
                 </div>
             </div>
