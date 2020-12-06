@@ -306,12 +306,12 @@ strong {
     transition: all 0.4s ease;
     position: relative;
 }
-.dark-mode .project-overline{
+.dark-mode .project-overline {
     color: var(--accents-color);
-} 
-.dark-mode .project-overline{
+}
+.dark-mode .project-overline {
     color: var(--accents-color);
-} 
+}
 
 .copyright-text {
     font-size: 16px;
@@ -405,7 +405,7 @@ strong {
 .dark-mode h4,
 .dark-mode h5,
 .dark-mode h6,
-.dark-mode .project-tech-list li ,
+.dark-mode .project-tech-list li,
 .dark-mode .project-links a,
 .dark-mode .job-description p,
 .dark-mode .color-mode {
@@ -556,9 +556,9 @@ strong {
 /* -------------------- */
 
 .heading {
-    padding: 10vh 0 5vh 0;
+    padding: 10vh 0 5vh;
 }
-.project-spacing{
+.project-spacing {
     height: 10vh;
 }
 .project-card {
@@ -655,7 +655,7 @@ strong {
     margin: 0;
     font-weight: bold;
     color: var(--accents-color);
-    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, .3);
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.3);
     font-family: 'Source Code Pro', monospace;
 }
 .job-description {
@@ -677,7 +677,7 @@ strong {
 }
 .company {
     color: var(--accents-color);
-    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, .3);
+    text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.3);
 }
 .company a {
     color: var(--accents-color);
@@ -705,8 +705,10 @@ strong {
 /* ------------------- */
 /* ----- Contact ----- */
 /* -------------------- */
-
-.to-email-field{
+.hidden {
+    display: none
+}
+.to-email-field {
     cursor: pointer;
 }
 
@@ -785,8 +787,7 @@ strong {
     .contact-info {
         padding: 0 2rem;
     }
-    body {
-    }
+    body {}
     .left {}
     .right {}
     .right-aligned {}
@@ -797,7 +798,7 @@ strong {
     .description_right {
         padding: 8px 20px;
     }
-    .project-spacing{
+    .project-spacing {
         height: 8vh;
     }
     .project-card {
@@ -853,10 +854,9 @@ strong {
     .navbar-expand-sm .navbar-nav .nav-link {
         padding: 3px 20px;
     }
-    body {
-    }
-    .heading{
-        padding: 8vh 0 4vh 0;
+    body {}
+    .heading {
+        padding: 8vh 0 4vh;
     }
     .description_left {
         padding: 8px 10px;
@@ -864,7 +864,7 @@ strong {
     .description_right {
         padding: 8px 10px;
     }
-    .project-spacing{
+    .project-spacing {
         height: 5vh;
     }
     .project-card {
@@ -896,7 +896,8 @@ strong {
         font-size: 15px;
     }
     .project-image a img {
-        
+        ;
+
         /*
         filter: brightness(0.3) saturate(100%) blur(4px);
         -webkit-filter: brightness(0.3) saturate(100%) blur(4px);
@@ -933,12 +934,11 @@ strong {
     p {
         text-align: center;
     }
-    body {
+    body {}
+    .heading {
+        padding: 6vh 0 3vh;
     }
-    .heading{
-        padding: 6vh 0 3vh 0;
-    }
-    .project-spacing{
+    .project-spacing {
         height: 5vh;
     }
     .project-card {
@@ -1010,9 +1010,8 @@ strong {
         vertical-align: top;
     }
 
-    body {
-    }
-    .project-spacing{
+    body {}
+    .project-spacing {
         height: 5vh;
     }
     .project-card {
@@ -1083,6 +1082,5 @@ strong {
         vertical-align: top;
     }
 
-    body {
-    }
+    body {}
 }

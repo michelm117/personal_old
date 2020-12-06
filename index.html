@@ -270,19 +270,18 @@
                                 Let's talk
                             </h2>
                         </div>
-                        <form class="fade-in" action="contactform.php" method="post">
+                        <form class="contact-form fade-in" action="php/contactform.php" method="post">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
                                     <input type="text" class="form-control" name="name" placeholder="Your Name"
                                         id="name">
                                 </div>
                                 <div class="col-lg-6 col-12">
-                                    <input type="email" class="form-control" name="email" placeholder="Email"
-                                        id="email">
+                                    <input type="email" class="form-control" name="mail" placeholder="Email" id="email">
                                 </div>
                                 <div class="col-12">
                                     <a href="mailto:mail@marcmichel.dev">
-                                        <input name="email" rows="6" class="form-control to-email-field"
+                                        <input rows="6" class="form-control to-email-field"
                                             placeholder="To: mail@marcmichel.dev" readonly></input>
                                     </a>
                                 </div>
@@ -290,7 +289,10 @@
                                     <textarea name="message" rows="6" class="form-control" id="message"
                                         placeholder="Message"></textarea>
                                 </div>
-                                <div class="ml-lg-auto col-lg-5 col-12 mx-auto">
+                                <div class="success-message hidden col-12">
+                                    <h4>Message was send!</h4>
+                                </div>
+                                <div class="submit-button ml-lg-auto col-lg-5 col-12 mx-auto">
                                     <input type="submit" name="submit" class="form-control submit-btn" value="Submit">
                                 </div>
                             </div>
