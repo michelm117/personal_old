@@ -576,7 +576,9 @@ strong {
     margin: 0;
     font-weight: bold;
     color: var(--accents-color);
+    /*
     text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.3);
+    */
     font-family: 'Source Code Pro', monospace;
 }
 .job-description {
@@ -598,7 +600,10 @@ strong {
 }
 .company {
     color: var(--accents-color);
+    font-weight: 600;
+    /*
     text-shadow: 1.5px 1.5px 1px rgba(0, 0, 0, 0.3);
+    */
 }
 .company a {
     color: var(--accents-color);
