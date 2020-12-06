@@ -40,8 +40,6 @@ function boxRollovers() {
     $selector = $(".project-card");
     XAngle = 0;
     YAngle = 0;
-    //Z = 50;
-    //Z = 10;
 
     $selector.on("mousemove", function (e) {
         var $this = $(this);
@@ -56,13 +54,6 @@ function boxRollovers() {
             console.log($this.children());
 
             updateView($this.children(".project-content").children(), 10);
-            /*
-            $.each(allContentElements, function (index, value) {
-                console.log(value);
-                updateView(value, 10);
-            }); 
-            */
-
         }
     });
 
@@ -81,43 +72,24 @@ function updateView(oLayer, z) {
     oLayer.find("strong").css({ "transform": "perspective(525px) translateZ(" + z + "px) rotateX(" + (XAngle / 0.66) + "deg) rotateY(" + (YAngle / 0.66) + "deg)", "transition": "none", "-webkit-transition": "none" });
 }
 
-var hideContent = true;
-$('.project-card').click(function () {
-    hideContent = !hideContent;
-
-    if (screenTooSmall && !hideContent) {
+// Hover over Image on md-screens to see content.
+var showContent = false;
+$('.project-card').hover(function () {
+    if (screenTooSmall && !showContent) {
         var image = $(this).children('.project-image').children('a').children('img');
         image.css({ 'filter': 'brightness(0.3) saturate(100%) blur(4px)', '-webkit-filter': 'brightness(0.3) saturate(100%) blur(4px)' });
 
         var content = $(this).children('.project-content');
         content.css({ 'filter': 'alpha(opacity=100)', 'opacity': '100' })
-    } else {
-        if (screenTooSmall && hideContent) {
-            var image = $(this).children('.project-image').children('a').children('img');
-            image.css({ 'filter': 'none', '-webkit-filter': 'none' });
-
-            var content = $(this).children('.project-content');
-            content.css({ 'filter': 'alpha(opacity=0)', 'opacity': '0' });
-        }
     }
-});
+}, function () {
+    showContent = false;
 
-$('.project-card').hover(function () {
-    if (screenTooSmall && hideContent) {
+    if (screenTooSmall) {
         var image = $(this).children('.project-image').children('a').children('img');
         image.css({ 'filter': 'none', '-webkit-filter': 'none' });
 
         var content = $(this).children('.project-content');
-        content.css({ 'filter': 'alpha(opacity=0)', 'opacity': '0' })
-    }
-}, function () {
-    hideContent = true;
-
-    if (screenTooSmall) {
-        var image = $(this).children('.project-image').children('a').children('img');
-        image.css({ 'filter': 'brightness(0.3) saturate(100%) blur(4px)', '-webkit-filter': 'brightness(0.3) saturate(100%) blur(4px)' });
-
-        var content = $(this).children('.project-content');
-        content.css({ 'filter': 'alpha(opacity=100)', 'opacity': '100' })
+        content.css({ 'filter': 'alpha(opacity=0)', 'opacity': '0' });
     }
 });
