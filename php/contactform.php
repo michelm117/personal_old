@@ -11,5 +11,5 @@
     $txt = "You have received an e-mail from ".$name." <".$mailFrom.">.\n\n".$message;
 
     mail($to, $subject, $txt, $headers);
-    header("Location: index.html?mailsend");
+    header("Location: ../index.html?mailsend");
 //}
