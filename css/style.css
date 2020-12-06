@@ -753,6 +753,10 @@ strong {
 .contact-info a {
     color: #f7f3f3;
 }
+.submit-btn {
+    text-align: center;
+    vertical-align: middle;
+}
 
 .social-links .uil {
     color: #f7f3f3;

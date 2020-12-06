@@ -1,4 +1,4 @@
-$('.contact-form').click('submit', function (e) {
+$('.submit-btn').click('submit', function (e) {
     e.preventDefault(); //this stops the form submit + refresh 
 
     $.ajax({
