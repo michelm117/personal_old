@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro &display=swap');
+@import url('https://fonts.googleapis.com/css?family=Roboto: 400, 400italic, 500, 700, 700italic, 300, 300italic');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP &family=Roboto&display=swap');:root {
     --bg-color: #eee;
     --white-color: #ffffff;
@@ -98,13 +98,17 @@ strong {
     height: 100vh;
 }
 #about {
-    height: 80vh;
+    height: 100%;
 }
 
-.fade-in{
+.fade-in {
     opacity: 0;
     transition: opacity 250ms ease-in;
 }
+.fade-in.appear {
+    opacity: 1;
+}
+
 .custom-btn {
     background: var(--bg-color);
     color: var(--text-color);
@@ -539,8 +543,8 @@ strong {
 /* ----- Projects ----- */
 /* -------------------- */
 
-.project-header {
-    padding-bottom: 2vh;
+.heading {
+    margin-bottom: 5vh;
 }
 
 .project-card {
@@ -621,6 +625,66 @@ strong {
     -webkit-box-shadow: 0 0 10px var(--main-btn-color);
     box-shadow: 0 0 10px var(--main-btn-color);
     border-radius: 8px;
+}
+
+
+/* ------------------- */
+/* ----- Contact ----- */
+/* -------------------- */
+.vl {
+    border-left: 3px solid var(--accents-color);
+    height: inherit;
+}
+.experience_wrapper {
+    justify-content: center;
+}
+.company-names {
+    padding: 12px 15px;
+    margin: 0;
+    font-weight: bold;
+    color: var(--accents-color);
+    text-shadow: 1px 1px 1px #eee;
+    font-family: 'Source Code Pro', monospace;
+}
+.job-description {
+    padding: 0;
+    margin: 0;
+}
+.job-description h4 {
+    padding: 10px 0 0;
+    margin: 0;
+}
+.job-description p {
+    font-family: 'Source Code Pro', monospace;
+    font-size: 15px;
+}
+.company {
+    margin: 0;
+    padding: 0;
+}
+.company {
+    color: var(--accents-color);
+    text-shadow: 2px 2px 2px #eee;
+}
+.company a {
+    color: var(--accents-color);
+    font-family: 'Source Code Pro', monospace;
+}
+.job-description-list {
+    padding-left: 20px;
+    padding-top: 0;
+    margin: 0;
+    list-style: none;
+}
+.job-description-list li::marker {
+    content: "▹";
+    color: var(--accents-color);
+    font-size: 1.5em;
+    text-shadow: 1px 1px 2px #eee;
+}
+.job-description-list li span {
+    display: block;
+    padding: 0.4em 0.5em;
 }
 
 
@@ -748,12 +812,13 @@ strong {
 
     .project-links-right a {
         padding: 5px 10px;
-    }
+    };
+    /*
     .project-image a img {
         filter: brightness(0.3) saturate(100%) blur(4px);
         -webkit-filter: brightness(0.3) saturate(100%) blur(4px);
     }
-
+*/
 }
 
 @media(max-width: 767px) {
