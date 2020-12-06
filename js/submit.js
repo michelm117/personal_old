@@ -5,7 +5,7 @@ $('.contact-form').on('submit', function (e) {
         data: { name: $('#name').val(), mail: $('#email').val(), message: $('#message').val() },
         type: 'POST',
         url: './php/contactform.php',
-        success: function (data) { $('.success-message').removeClass('hidden') },
+        success: function (data) { $('.success-message').removeClass('hidden'); console.log(r + " \n " + data)},
         error: function (data) { alert('Message could not be send. Please write an email to <mail@marcmichel.dev>.' + data); console.log(r + " \n " + data) }
     });
 });
