@@ -1,4 +1,5 @@
 $('.contact-form').on('submit', function (e) {
+    alert("NICE");
     e.preventDefault(); //this stops the form submit + refresh 
 
     $.ajax({
