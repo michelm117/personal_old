@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_POST['submit'])){
+//if(isset($_POST['submit'])){
     $name = $_POST['name'];
     $mailFrom = $_POST['mail'];
     $to = 'mail@marcmichel.dev';
@@ -12,4 +12,4 @@ if(isset($_POST['submit'])){
 
     mail($to, $subject, $txt, $headers);
     header("Location: index.html?mailsend");
-}
+//}
