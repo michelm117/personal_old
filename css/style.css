@@ -628,9 +628,19 @@ strong {
 }
 
 
-/* ------------------- */
-/* ----- Contact ----- */
 /* -------------------- */
+/* ----- Contact ------ */
+/* -------------------- */
+.error {
+    position: relative;
+    animation: shake .15s linear;
+    animation-iteration-count: 4;
+}
+@keyframes shake {
+    0% { left: -5px; }
+    100% { right: -5px; }
+}
+
 .hidden {
     display: none
 }
@@ -693,6 +703,11 @@ strong {
 .social-links .uil:hover {
     color: var(--accents-color);
 }
+
+
+/* -------------------- */
+/* ----- Screens ------ */
+/* -------------------- */
 
 @media(max-width: 1199px) {
     .owl-theme .owl-dots {

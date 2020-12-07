@@ -15,7 +15,6 @@
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-
     <!-- MAIN STYLE -->
     <link rel="stylesheet" href="css/style.css">
 </head>
@@ -311,11 +310,11 @@
                             onsubmit="if(submitted) return false; submitted = true; return true">
                             <div class="row">
                                 <div class="col-lg-6 col-12">
-                                    <input type="text" class="form-control" name="name" placeholder="Your Name"
-                                        id="name">
+                                    <input type="text" class="form-control" id="nameField" name="name" placeholder="Your Name"
+                                        id="name" required>
                                 </div>
                                 <div class="col-lg-6 col-12">
-                                    <input type="email" class="form-control" name="mail" placeholder="Email" id="email">
+                                    <input type="email" class="form-control" id="mailField" name="mail" placeholder="Email" id="email" required>
                                 </div>
                                 <div class="col-12">
                                     <a href="mailto:mail@marcmichel.dev">
@@ -324,14 +323,17 @@
                                     </a>
                                 </div>
                                 <div class="col-12">
-                                    <textarea name="message" rows="6" class="form-control" id="message"
-                                        placeholder="Message"></textarea>
+                                    <textarea name="message" id="messageField" rows="6" class="form-control" id="message"
+                                        placeholder="Message" required></textarea>
                                 </div>
                                 <div class="success-message hidden col-12">
                                     <h4>Message was send!</h4>
                                 </div>
+                                <div class="error-message hidden col-12">
+                                    <h4>Message could not be send. Please contact me via mail@marcmichel.dev</h4>
+                                </div>
                                 <div class="text-center submit-button ml-lg-auto col-lg-5 col-12 mx-auto">
-                                    <input type="" name="submit" class="form-control submit-btn" value="Submit">
+                                    <input type="submit" name="submit" class="form-control submit-btn" value="Submit">
                                 </div>
                             </div>
                         </form>
