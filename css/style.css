@@ -615,10 +615,19 @@ strong {
     margin: 0;
     list-style: none;
 }
+/*
 .job-description-list li::marker {
     content: "▹";
     color: var(--accents-color);
     font-size: 1.5em;
+    text-shadow: 1px 1px 2px #eee;
+
+
+
+.job-description-list li::before {
+    content: "▹";
+    color: var(--accents-color);
+
     text-shadow: 1px 1px 2px #eee;
 }
 .job-description-list li span {
@@ -627,18 +636,52 @@ strong {
     color: var(--text-color);
 }
 
+}*/
+.technologies-list {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+.technologies-list .desc {
+    display: block;
+    padding: 0.4em 0.5em;
+    color: var(--text-color);
+}
+
+.technologies-list .marker {
+    font-size: 20px;
+    color: var(--accents-color);
+    text-shadow: 1px 1px 2px #eee;
+}
+
+.desc {
+    display: block;
+    padding: 0.4em 0.5em;
+    color: var(--text-color);
+    margin: -30px 0 0 -7px;
+}
+.marker {
+    font-size: 20px;
+    margin-left: -20px;
+    color: var(--accents-color);
+    text-shadow: 1px 1px 2px #eee;
+}
 
 /* -------------------- */
 /* ----- Contact ------ */
 /* -------------------- */
 .error {
     position: relative;
-    animation: shake .15s linear;
+    animation: shake 0.15s linear;
     animation-iteration-count: 4;
 }
 @keyframes shake {
-    0% { left: -5px; }
-    100% { right: -5px; }
+    0% {
+        left: -5px;
+    }
+    100% {
+        right: -5px;
+    }
 }
 
 .hidden {
@@ -931,6 +974,14 @@ strong {
     .fa {
         font-size: 20px;
     }
+    .technologies-list .marker {
+        opacity: 0;
+    }
+    .technologies-description {
+        text-align: center;
+        justify-content: center;
+        align-content: center;
+    }
 }
 
 @media(max-width: 465px) {
@@ -1035,5 +1086,60 @@ strong {
         vertical-align: top;
     }
 
-    body {}
+    .project-spacing {
+        height: 5vh;
+    }
+    .project-card {
+        position: relative;
+        display: inline-block;
+    }
+    .project-content {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        text-align: center;
+        min-height: 100%;
+    }
+    .project-overline {
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    .project-title {
+        color: white;
+        font-size: 16px;
+        margin: 0;
+        padding: 0;
+        margin-top: 3px;
+    }
+    .project-description {
+        padding: 0 5px;
+        margin: 0 5px;
+    }
+    .project-description p {
+        font-size: 10px;
+        margin: 5px;
+        padding: 0;
+    }
+    .project-tech-list li {
+        color: white;
+        margin: 0;
+        padding: 0 3px;
+        font-size: 12px;
+    }
+    .project-links a {
+        margin: 0;
+        padding: 0;
+    }
+    .project-links  {
+        margin: -8px;
+        padding: 0;
+    }
+    .fa {
+        padding: 0 10px;
+        margin: 0;
+        font-size: 14px;
+        margin-top: -10px;
+    }
 }
