@@ -40,7 +40,7 @@ $('.submit-btn').click('submit', function (e) {
     }
 
     $.ajax({
-        data: { name: $('#name').val(), mail: $('#email').val(), message: $('#message').val() },
+        data: { name: $('#nameField').val(), mail: $('#mailField').val(), message: $('#messageField').val() },
         type: 'POST',
         url: './php/contactform.php',
         success: function (data) {
