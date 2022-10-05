@@ -718,9 +718,9 @@ strong {
     cursor: pointer;
     transition: all 0.4s ease;
 }
-.contact-form .submit-btn:hover {
+/* .contact-form .submit-btn:hover {
     background: var(--main-btn-color);
-}
+} */
 
 .contact-info {
     background: var(--main-btn-color);
