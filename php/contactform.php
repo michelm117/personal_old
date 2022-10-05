@@ -1,6 +1,5 @@
 <?php
 
-//if(isset($_POST['submit'])){
 $name = $_POST['name'];
 $mailFrom = $_POST['mail'];
 $to = 'mail@marcmichel.dev';
@@ -13,4 +12,3 @@ $txt = "You have received an e-mail from ".$name." <".$mailFrom.">.\nThe message
 
 mail($to, $subject, $txt, $headers);
 header("Location: ../index.html?mailsend");
-//}
